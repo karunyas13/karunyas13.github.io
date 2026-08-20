@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karunya Sundaresan | Business Analyst & Project Management</title>
+
+    <meta name="description"
+          content="Portfolio of Karunya Sundaresan — Technical Business Analyst, Project Management and Agile professional.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07090d;
+            color: #f5f7fa;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(7, 9, 13, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #27d3c2;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #d5d8de;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #27d3c2;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: auto;
+            padding: 150px 30px 80px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid rgba(39,211,194,0.35);
+            border-radius: 30px;
+            color: #27d3c2;
+            font-size: 13px;
+            margin-bottom: 25px;
+            background: rgba(39,211,194,0.06);
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 1;
+            margin-bottom: 20px;
+            letter-spacing: -4px;
+        }
+
+        .hero h1 span {
+            color: #27d3c2;
+        }
+
+        .hero h2 {
+            font-size: clamp(22px, 3vw, 34px);
+            font-weight: 500;
+            color: #d9dde4;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #a9afb9;
+            font-size: 17px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 24px;
+            border-radius: 30px;
+            border: 1px solid #27d3c2;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: #27d3c2;
+            color: #071014;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(39,211,194,0.2);
+        }
+
+        .btn-outline {
+            color: #27d3c2;
+        }
+
+        .btn-outline:hover {
+            background: #27d3c2;
+            color: #071014;
+        }
+
+        /* HERO VISUAL */
+        .hero-card {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-circle {
+            width: 330px;
+            height: 330px;
+            border-radius: 50%;
+            border: 2px solid #27d3c2;
+            background: linear-gradient(145deg, #111923, #080b10);
+            box-shadow:
+                0 0 50px rgba(39,211,194,0.15),
+                inset 0 0 50px rgba(39,211,194,0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .profile-circle h3 {
+            font-size: 23px;
+            color: #27d3c2;
+            margin-bottom: 10px;
+        }
+
+        .profile-circle p {
+            color: #aeb4bd;
+            font-size: 14px;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 100px 30px;
+        }
+
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        .section-title small {
+            color: #27d3c2;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            color: #9097a3;
+            margin-top: 10px;
+            max-width: 700px;
+        }
+
+        /* ABOUT */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        .about-card {
+            background: #0d1118;
+            border: 1px solid #1b222c;
+            border-radius: 18px;
+            padding: 30px;
+        }
+
+        .about-card p {
+            color: #aeb4bd;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 10px 17px;
+            border-radius: 25px;
+            background: #10161e;
+            border: 1px solid #202a34;
+            color: #cdd2d9;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: #27d3c2;
+            color: #27d3c2;
+            transform: translateY(-2px);
+        }
+
+        /* EXPERIENCE */
+        .timeline {
+            border-left: 2px solid #1e3034;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -39px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #27d3c2;
+            box-shadow: 0 0 15px rgba(39,211,194,0.5);
+        }
+
+        .timeline-item h3 {
+            font-size: 22px;
+        }
+
+        .timeline-item .date {
+            color: #27d3c2;
+            font-size: 13px;
+            margin: 5px 0 12px;
+        }
+
+        .timeline-item p {
+            color: #aeb4bd;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #0d1118;
+            border: 1px solid #1c252e;
+            border-radius: 20px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: #27d3c2;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        .project-number {
+            color: #27d3c2;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .project-card h3 {
+            font-size: 24px;
+            margin: 12px 0;
+        }
+
+        .project-card p {
+            color: #9fa6b1;
+            margin-bottom: 20px;
+        }
+
+        .project-status {
+            display: inline-block;
+            font-size: 12px;
+            padding: 6px 11px;
+            border-radius: 20px;
+            background: rgba(39,211,194,0.08);
+            color: #27d3c2;
+        }
+
+        /* CERTIFICATIONS */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .cert-card {
+            padding: 25px;
+            border-radius: 16px;
+            background: #0d1118;
+            border: 1px solid #1c252e;
+        }
+
+        .cert-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .cert-card p {
+            color: #969eaa;
+            font-size: 14px;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            text-align: center;
+            background: linear-gradient(
+                145deg,
+                #0d171a,
+                #0b1016
+            );
+            border: 1px solid #1b3535;
+            border-radius: 25px;
+            padding: 70px 30px;
+        }
+
+        .contact-box h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #9ea5af;
+            margin-bottom: 30px;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid #151c23;
+            padding: 30px;
+            text-align: center;
+            color: #707783;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding-top: 130px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-card {
+                margin-top: 30px;
+            }
+
+            .profile-circle {
+                width: 270px;
+                height: 270px;
+            }
+
+            .about-grid,
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                Karunya<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <main id="home">
+
+        <div class="hero">
+
+            <div>
+                <div class="tag">
+                    BUSINESS ANALYSIS • PROJECT MANAGEMENT • AI
+                </div>
+
+                <h1>
+                    Hi, I'm <span>Karunya</span>
+                </h1>
+
+                <h2>
+                    Technical Business Analyst
+                </h2>
+
+                <p>
+                    I bridge business needs and technology through
+                    requirements analysis, Agile project delivery,
+                    data-driven insights, and practical AI solutions.
+                </p>
+
+                <div class="buttons">
+                    <a class="btn btn-primary" href="#projects">
+                        Explore My Projects
+                    </a>
+
+                    <a class="btn btn-outline"
+                       href="https://www.linkedin.com/in/karunya-sundaresan-a246b616b/"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="profile-circle">
+
+                    <div>
+                        <h3>BA × PM × AI</h3>
+
+                        <p>
+                            Turning business problems into
+                            structured, measurable and
+                            technology-driven solutions.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ABOUT -->
+        <section id="about">
+
+            <div class="section-title">
+                <small>01 — About</small>
+                <h2>About Me</h2>
+                <p>
+                    A business-focused professional who enjoys
+                    connecting people, processes, data and technology.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-card">
+                    <p>
+                        I am a Technical Business Analyst with an
+                        interest in Agile delivery, project management,
+                        data analytics and AI-driven solutions.
+                    </p>
+                    <br>
+                    <p>
+                        My focus is on understanding business problems,
+                        translating them into clear requirements and
+                        working with technical teams to deliver practical
+                        solutions.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <p>
+                        This portfolio will showcase real-world
+                        projects covering Business Analysis,
+                        Project Management, Analytics and Artificial
+                        Intelligence.
+                    </p>
+                    <br>
+                    <p>
+                        Each project will document not only the final
+                        solution, but also the requirements, process,
+                        decisions and business impact.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPERIENCE -->
+        <section id="experience">
+
+            <div class="section-title">
+                <small>02 — Experience</small>
+                <h2>Professional Journey</h2>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <h3>Technical Business Analyst</h3>
+
+                    <div class="date">
+                        Professional Experience
+                    </div>
+
+                    <p>
+                        Business analysis, requirements management,
+                        stakeholder collaboration, Agile delivery,
+                        data analysis and coordination with technical
+                        teams.
+                    </p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <h3>Business & Technology Projects</h3>
+
+                    <div class="date">
+                        Portfolio Projects
+                    </div>
+
+                    <p>
+                        Building practical solutions that combine
+                        business analysis, project management,
+                        analytics and AI.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILLS -->
+        <section id="skills">
+
+            <div class="section-title">
+                <small>03 — Skills</small>
+                <h2>What I Work With</h2>
+            </div>
+
+            <div class="skills">
+
+                <span class="skill">Business Analysis</span>
+                <span class="skill">Requirements Engineering</span>
+                <span class="skill">Agile</span>
+                <span class="skill">Scrum</span>
+                <span class="skill">Project Management</span>
+                <span class="skill">Stakeholder Management</span>
+                <span class="skill">User Stories</span>
+                <span class="skill">UAT</span>
+                <span class="skill">Jira</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Power BI</span>
+                <span class="skill">Python</span>
+                <span class="skill">REST APIs</span>
+                <span class="skill">Data Analysis</span>
+                <span class="skill">AI / LLM</span>
+                <span class="skill">Data Quality</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section id="projects">
+
+            <div class="section-title">
+                <small>04 — Projects</small>
+                <h2>Featured Work</h2>
+
+                <p>
+                    Four practical projects combining Business Analysis,
+                    Project Management, Data and AI.
+                </p>
+            </div>
+
+
+            <div class="projects">
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 01 • AI
+                    </div>
+
+                    <h3>
+                        AI Business Requirements Assistant
+                    </h3>
+
+                    <p>
+                        An AI-powered assistant designed to transform
+                        business problems into structured requirements,
+                        user stories and acceptance criteria.
+                    </p>
+
+                    <span class="project-status">
+                        Coming Soon
+                    </span>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 02 • AI
+                    </div>
+
+                    <h3>
+                        AI Project Management & Risk Assistant
+                    </h3>
+
+                    <p>
+                        An AI-assisted project management solution for
+                        sprint health, risks, dependencies, meeting
+                        actions and stakeholder reporting.
+                    </p>
+
+                    <span class="project-status">
+                        Coming Soon
+                    </span>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 03 • ANALYTICS
+                    </div>
+
+                    <h3>
+                        Business Intelligence & KPI Dashboard
+                    </h3>
+
+                    <p>
+                        A business analytics project using SQL,
+                        Python and visualization to turn business
+                        data into actionable insights.
+                    </p>
+
+                    <span class="project-status">
+                        Coming Soon
+                    </span>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 04 • BA / PM
+                    </div>
+
+                    <h3>
+                        Requirements & Project Management System
+                    </h3>
+
+                    <p>
+                        An end-to-end Agile project demonstrating
+                        requirements, process flows, sprint planning,
+                        risk management and UAT.
+                    </p>
+
+                    <span class="project-status">
+                        Coming Soon
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications">
+
+            <div class="section-title">
+                <small>05 — Certifications</small>
+                <h2>Certifications</h2>
+            </div>
+
+            <div class="cert-grid">
+
+                <div class="cert-card">
+                    <h3>Scrum Master</h3>
+                    <p>
+                        Agile Scrum Certification
+                    </p>
+                </div>
+
+                <div class="cert-card">
+                    <h3>Jira Certification</h3>
+                    <p>
+                        Simplilearn
+                    </p>
+                </div>
+
+                <div class="cert-card">
+                    <h3>Agile Project Management</h3>
+                    <p>
+                        HP LIFE
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact">
+
+            <div class="contact-box">
+
+                <h2>Let's Connect</h2>
+
+                <p>
+                    Interested in Business Analysis, Project Management,
+                    Agile delivery, data or AI?
+                </p>
+
+                <div class="buttons"
+                     style="justify-content:center;">
+
+                    <a class="btn btn-primary"
+                       href="https://www.linkedin.com/in/karunya-sundaresan-a246b616b/"
+                       target="_blank">
+                        Connect on LinkedIn
+                    </a>
+
+                    <a class="btn btn-outline"
+                       href="https://github.com/karunyas13"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Karunya Sundaresan · Business Analysis · Project Management · AI
+    </footer>
+
+</body>
+</html>
