@@ -245,29 +245,54 @@
             color: #aeb4bd;
         }
 
-        /* SKILLS */
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+     /* SKILLS */
 
-        .skill {
-            padding: 10px 17px;
-            border-radius: 25px;
-            background: #10161e;
-            border: 1px solid #202a34;
-            color: #cdd2d9;
-            font-size: 14px;
-            transition: 0.3s;
-        }
+.skill-groups {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
 
-        .skill:hover {
-            border-color: #27d3c2;
-            color: #27d3c2;
-            transform: translateY(-2px);
-        }
+.skill-group {
+    background: #0d1118;
+    border: 1px solid #1c252e;
+    border-radius: 18px;
+    padding: 28px;
+    transition: 0.3s;
+}
 
+.skill-group:hover {
+    border-color: #27d3c2;
+    transform: translateY(-4px);
+}
+
+.skill-group h3 {
+    color: #27d3c2;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    padding: 10px 17px;
+    border-radius: 25px;
+    background: #10161e;
+    border: 1px solid #202a34;
+    color: #cdd2d9;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    border-color: #27d3c2;
+    color: #27d3c2;
+    transform: translateY(-2px);
+}
         /* EXPERIENCE */
         .timeline {
             border-left: 2px solid #1e3034;
